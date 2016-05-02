@@ -6,7 +6,6 @@ sudo: required
 matrix:
   include:
     - php: 7.0
-      env: ARGS="--profile=platformui --tags='~@edge'"
 
 
 # test only master (+ Pull requests)
@@ -28,7 +27,7 @@ before_script:
 
 # execute behat as the script command
 script:
-  - php bin/behat -c behat.yml.dist $ARGS --tags='~@broken'
+  - php bin/behat -c behat.yml.dist --profile=platformui --tags='~@edge,~@broken'
 
 # disable mail notifications
 notifications:

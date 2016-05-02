@@ -5,18 +5,16 @@ sudo: required
 
 matrix:
   include:
-    - php: 5.6
-      env: ARGS="--profile=core"
-    - php: 5.5
-      env: ARGS="--profile=rest --suite=fullJson"
     - php: 7.0
-      env: ARGS="--profile=rest --suite=fullXml"
+      env: ARGS="--profile=platformui --tags='~@edge'"
+
 
 # test only master (+ Pull requests)
 branches:
   only:
     - master
     - "1.3"
+    - "test_behat_object_manager"
 
 # install packages
 before_install:

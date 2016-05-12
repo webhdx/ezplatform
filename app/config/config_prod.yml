@@ -25,3 +25,8 @@ monolog:
             level: debug
         console:
             type:  console
+
+stash:
+    caches:
+        default:
+            inMemory: false

@@ -25,8 +25,6 @@ if ($loaderFile = getenv('SYMFONY_CLASSLOADER_FILE')) {
     }
 }
 
-require_once __DIR__ . '/../app/AppKernel.php';
-
 if ($useDebugging) {
     Debug::enable();
 }
@@ -51,7 +49,6 @@ if ($useHttpCache) {
     if ($httpCacheClass = getenv('SYMFONY_HTTP_CACHE_CLASS')) {
         $kernel = new $httpCacheClass($kernel);
     } else {
-        require_once __DIR__ . '/../app/AppCache.php';
         $kernel = new AppCache($kernel);
     }
 }

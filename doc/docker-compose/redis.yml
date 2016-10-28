@@ -1,6 +1,10 @@
 version: '2'
 # Redis config, to be appended after base-prod or base-dev, ..., but before selenium.yml
 
+## WARNING:
+# This service is currently work in progress, is not tested by CI, and thus not guranteed to work.
+# Aka Redis support using this config is thus considered alpha software for the time being.
+
 services:
   app:
     depends_on:

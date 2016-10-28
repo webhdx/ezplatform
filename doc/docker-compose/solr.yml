@@ -6,6 +6,10 @@ version: '2'
 # NOTE: You'll need to manually reindex the solr index when booting this as we don't have entrypoint for solr yet.
 #       (Unless you use ezplatform:install command which indexes for you)
 
+## WARNING!
+# This service is currently work in progress, is not tested by CI, and thus not guranteed to work.
+# Aka Solr support using this config is thus considered alpha software for the time being.
+
 services:
   app:
     depends_on:

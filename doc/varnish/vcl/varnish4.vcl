@@ -147,11 +147,11 @@ sub ez_purge {
             return (synth(405, "Method not allowed"));
         }
 
-        # If http header "xkey" is set, we assume purge is on key and you have Varnish xkey installed
+        # If http header "key" is set, we assume purge is on key and you have Varnish xkey installed
         if (req.http.key) {
             # By default we recommend using soft purge to respect grace time, if you need to hard purge use:
-            # set req.http.n-gone = xkey.purge(req.http.xkey);
-            set req.http.n-gone = xkey.softpurge(req.http.xkey);
+            # set req.http.n-gone = xkey.purge(req.http.key);
+            set req.http.n-gone = xkey.softpurge(req.http.key);
 
             return (synth(200, "Invalidated "+req.http.n-gone+" objects"));
         }

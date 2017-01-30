@@ -185,7 +185,7 @@ sub ez_user_context_hash {
             set req.http.x-fos-original-cookie = req.http.cookie;
             set req.http.cookie = ";" + req.http.cookie;
             set req.http.cookie = regsuball(req.http.cookie, "; +", ";");
-            set req.http.Cookie = regsuball(req.http.Cookie, ";(eZSESSID[^=]*)=", "; \1=");
+            set req.http.cookie = regsuball(req.http.cookie, ";(eZSESSID[^=]*)=", "; \1=");
             set req.http.cookie = regsuball(req.http.cookie, ";[^ ][^;]*", "");
             set req.http.cookie = regsuball(req.http.cookie, "^[; ]+|[; ]+$", "");
 

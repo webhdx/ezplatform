@@ -30,7 +30,10 @@
         "ezsystems/ezpublish-kernel": "^6.9@dev",
         "ezsystems/repository-forms": "^1.7@dev",
         "ezsystems/ezplatform-solr-search-engine": "^1.3@dev",
-        "ezsystems/platform-ui-bundle": "^1.9@dev",
+        "ezsystems/platform-ui-bundle": "dev-proto_hybrid_enhanced as 1.9.x-dev",
+        "dpobel/ez-field-edit": "dev-master as 1.0.x-dev",
+        "dpobel/hybrid-platformui-assets": "~0.3",
+        "composer/installers": "dev-ezplatform_assets as 1.3.x-dev",
         "ezsystems/ez-support-tools": "~0.1.0",
         "ezsystems/ezplatform-http-cache": "^0.1@dev",
         "ezplatform-i18n/ezplatform-i18n-ach_ug": "^1.1@dev",
@@ -52,6 +55,20 @@
         "jarnaiz/behat-junit-formatter": "^1.3",
         "ezsystems/behatbundle": "^6.3"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/dpobel/ez-field-edit.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/dpobel/hybrid-platformui-assets.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/dpobel/installers.git"
+        }
+    ],
     "suggest": {
         "ezsystems/legacy-bridge": "Provides the full legacy backoffice and legacy features"
     },

@@ -74,6 +74,12 @@ ezpublish:
 
         site:
             languages: [eng-GB]
+            content_view:
+                full:
+                    home:
+                        template: "content.html.twig"
+                        match:
+                            '@App\Matcher\MyMatcher': 2
 
     url_alias:
         slug_converter:
